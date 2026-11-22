@@ -91,6 +91,14 @@ h2{font-size:clamp(28px,4vw,38px);margin:0 0 8px;text-align:center}
 .support p{max-width:720px;margin:0 auto 14px}
 .uses{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 24px;padding:0;list-style:none}
 .uses li{background:rgba(255,255,255,.75);border-radius:999px;padding:6px 16px;font-weight:600;font-size:16px}
+.donate{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:8px 0 24px;text-align:center}
+.dbox{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.dbox h3{margin:0;font-size:22px}
+.dnote{margin:0!important;color:var(--soft);font-size:16px}
+.qr{width:200px;height:200px;display:block;border-radius:14px;border:1px solid var(--line)}
+.etr{margin:4px 0 0!important;font-size:19px}
+.etr .mail{margin-top:0}
+.dsteps{text-align:start;margin:0;padding-inline-start:22px;color:var(--soft);font-size:16px}
 .mail{display:inline-block;margin-top:14px;font-weight:700;direction:ltr;unicode-bidi:isolate}
 footer{padding:36px 0 50px;text-align:center;color:var(--soft);font-size:15px}
 footer a{font-weight:700}
@@ -276,8 +284,25 @@ footer a{font-weight:700}
       <li>🎙️ <span lang-ar>التسجيل الصوتي والمراجعة</span><span lang-en>Voice recording and review</span></li>
       <li>🚫 <span lang-ar>إبقاء التطبيقات بلا إعلانات</span><span lang-en>Keeping the apps ad-free</span></li>
     </ul>
+    <div class="donate">
+      <div class="dbox">
+        <h3>💳 <span lang-ar>تبرّع عبر PayPal</span><span lang-en>Donate with PayPal</span></h3>
+        <p class="dnote"><span lang-ar>امسح الرمز بكاميرا هاتفك، أو اضغط الزر. يمكنك الدفع بحساب PayPal أو ببطاقة.</span><span lang-en>Scan the code with your phone camera, or press the button. Pay with PayPal or a card.</span></p>
+        <a id="qrlink" href="#" target="_blank" rel="noopener"><img class="qr" src="images/donate-qr.svg" alt="QR code: donate $10 to Nabta Kids with PayPal" width="200" height="200"></a>
+        <a class="btn coffee" id="coffee" href="mailto:nabtakidspro@gmail.com?subject=%E2%98%95%20Support%20Nabta%20Kids">☕ <span lang-ar>أريد أن أدعمكم بـ ١٠$</span><span lang-en>Support us with $10</span></a>
+      </div>
+      <div class="dbox">
+        <h3>🇨🇦 <span lang-ar>تحويل Interac e-Transfer</span><span lang-en>Interac e-Transfer</span></h3>
+        <p class="dnote"><span lang-ar>للمتبرعين في كندا: أرسل أي مبلغ من تطبيق بنكك إلى هذا البريد. يصل التحويل تلقائيًا، فلا حاجة إلى سؤال أمان.</span><span lang-en>For donors in Canada: send any amount from your bank app to this email. It is deposited automatically, so no security question is needed.</span></p>
+        <p class="etr"><span class="mail">nabtakidspro@gmail.com</span><br><button class="copy" data-copy><span lang-ar>نسخ البريد</span><span lang-en>Copy email</span></button></p>
+        <ol class="dsteps">
+          <li><span lang-ar>افتح تطبيق بنكك واختر Interac e-Transfer</span><span lang-en>Open your bank app and choose Interac e-Transfer</span></li>
+          <li><span lang-ar>أضف المستلم: Nabta Kids بهذا البريد</span><span lang-en>Add the recipient Nabta Kids with this email</span></li>
+          <li><span lang-ar>اكتب المبلغ، وفي الرسالة: «دعم نبتة»</span><span lang-en>Enter the amount, with the message "Nabta Kids donation"</span></li>
+        </ol>
+      </div>
+    </div>
     <div class="btns">
-      <a class="btn coffee" id="coffee" href="mailto:nabtakidspro@gmail.com?subject=%E2%98%95%20Support%20Nabta%20Kids">☕ <span lang-ar>أريد أن أدعمكم بـ ١٠$</span><span lang-en>Support us with $10</span></a>
       <a class="btn main" href="mailto:nabtakidspro@gmail.com?subject=Nabta%20Kids%20partnership">🤝 <span lang-ar>شراكة أو تعاون</span><span lang-en>Partner with us</span></a>
       <a class="btn alt" href="mailto:nabtakidspro@gmail.com?subject=Nabta%20Kids%20feedback">💬 <span lang-ar>أرسل لنا رأيك</span><span lang-en>Send us feedback</span></a>
     </div>
@@ -296,7 +321,7 @@ footer a{font-weight:700}
 // Put your Buy Me a Coffee, Ko-fi or PayPal link here when you have one; until then the coffee button opens an email.
 const COFFEE_LINK = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=nabtakidspro%40gmail.com&amount=10&currency_code=USD&item_name=Support%20Nabta%20Kids';
 const EMAIL = 'nabtakidspro@gmail.com';
-if (COFFEE_LINK) { const c = document.getElementById('coffee'); c.href = COFFEE_LINK; c.target = '_blank'; c.rel = 'noopener'; }
+if (COFFEE_LINK) { const c = document.getElementById('coffee'); c.href = COFFEE_LINK; c.target = '_blank'; c.rel = 'noopener'; document.getElementById('qrlink').href = COFFEE_LINK; }
 const html = document.documentElement, btn = document.getElementById('lang');
 const setLang = l => {
   html.lang = l; html.dir = l === 'ar' ? 'rtl' : 'ltr'; btn.textContent = l === 'ar' ? 'English' : 'العربية';
@@ -307,10 +332,9 @@ let start = new URLSearchParams(location.search).get('lang');
 if (!start) { try { start = localStorage.getItem('nabta-lang'); } catch (e) { } }
 setLang(start === 'en' ? 'en' : 'ar');
 btn.onclick = () => setLang(html.lang === 'ar' ? 'en' : 'ar');
-document.getElementById('copy').onclick = async e => {
-  const b = e.currentTarget;
+document.querySelectorAll('#copy,[data-copy]').forEach(b => b.onclick = async () => {
   try { await navigator.clipboard.writeText(EMAIL); b.textContent = html.lang === 'ar' ? 'تم النسخ ✓' : 'Copied ✓'; } catch (x) { }
-};
+});
 </script>
 </body>
 </html>

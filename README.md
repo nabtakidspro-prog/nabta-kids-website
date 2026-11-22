@@ -20,5 +20,9 @@ The website is `index.html`. It is in Arabic and English, and the button at the 
 ## Donations
 The "Support us with $10" button opens a PayPal donation of $10 (USD) to nabtakidspro@gmail.com. To change the amount or the link, open `index.html` and edit `const COFFEE_LINK` near the end. If it is set to `''`, the button opens an email instead.
 
+The donation box also shows `images/donate-qr.svg`, a QR code for the same PayPal link. If you change the link, make a new QR code too, or it will still ask for $10.
+
+The box also has an Interac e-Transfer option for donors in Canada, using nabtakidspro@gmail.com. For it to work, register this email for **Interac Autodeposit** in your online banking. Keep a record of every donation (donor, date, amount and reference).
+
 ## Contact
 nabtakidspro@gmail.com
