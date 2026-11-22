@@ -18,7 +18,7 @@ The website is `index.html`. It is in Arabic and English, and the button at the 
 3. After a minute the site is live at `https://<your-username>.github.io/<repo-name>/`.
 
 ## Donations
-The "Support us with $10" button opens a PayPal donation of $10 (USD) to nabtakidspro@gmail.com. To change the amount or the link, open `index.html` and edit `const COFFEE_LINK` near the end. If it is set to `''`, the button opens an email instead.
+The "Support us with $10" button opens https://paypal.me/nabtakids/10USD, with $10 (USD) already filled in. To change the amount, open `index.html` and edit `const COFFEE_LINK` near the end. For example, `.../nabtakids/20CAD` asks for $20 in Canadian dollars, and `.../nabtakids` lets the donor choose. If it is set to `''`, the button opens an email instead.
 
 The donation box also shows `images/donate-qr.svg`, a QR code for the same PayPal link. If you change the link, make a new QR code too, or it will still ask for $10.
 
