@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nabta Kids · نبتة | تطبيقات تعليمية للأطفال</title>
+<meta name="description" content="نبتة: شركة تصمّم تطبيقات تعليمية للأطفال من ٣ إلى ٧ سنوات: القرآن، التجويد، العربية، التفكير الناقد والرياضيات. Nabta Kids builds learning apps for children aged 3 to 7.">
+<meta property="og:title" content="Nabta Kids · Learning apps for Muslim children">
+<meta property="og:description" content="Quran, Tajweed, Arabic, critical thinking and math for ages 3 to 7. No ads, no tracking, works offline.">
+<meta property="og:image" content="images/qw-home.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23FFF0C7'/%3E%3Cpath d='M20 34V20' stroke='%232F9A5E' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M20 22c-8 0-11-5-11-11 7 0 11 4 11 11z' fill='%232F9A5E'/%3E%3Cpath d='M20 19c0-6 4-10 11-10 0 6-4 10-11 10z' fill='%2353B97E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF8EC;--card:#fff;--ink:#2B3A55;--soft:#5E6A80;--brand:#2F9A5E;--brand-d:#1E6B40;--warm:#C8643B;--sun:#FFC845;--line:#EFE3CF;--shadow:0 4px 0 #EADBC4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Baloo Bhaijaan 2",system-ui,sans-serif;font-size:18px;line-height:1.7}
+[lang-en]{display:none!important}
+html[lang=en] [lang-ar]{display:none!important}
+html[lang=en] [lang-en]{display:revert!important}
+a{color:var(--brand-d)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:5;background:rgba(255,248,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;text-decoration:none;color:var(--ink);line-height:1.1}
+.logo small{display:block;font-size:13px;font-weight:600;color:var(--brand-d)}
+.logo svg{width:40px;height:40px;flex:none}
+nav.links{display:flex;gap:18px;margin-inline-start:auto}
+nav.links a{text-decoration:none;color:var(--soft);font-weight:600;font-size:16px}
+nav.links a:hover{color:var(--brand-d)}
+.lang{border:2px solid var(--brand);background:#fff;color:var(--brand-d);border-radius:999px;padding:4px 16px;font:inherit;font-weight:700;font-size:16px;cursor:pointer}
+@media (max-width:820px){nav.links{display:none}.lang{margin-inline-start:auto}}
+.hero{padding:56px 0 40px;text-align:center}
+.eyebrow{display:inline-block;background:#DDF3E5;color:var(--brand-d);font-weight:700;font-size:15px;border-radius:999px;padding:4px 16px;margin-bottom:14px}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.25;margin:0 0 14px;font-weight:800}
+.hero h1 b{color:var(--brand)}
+.hero p.lead{font-size:clamp(18px,2.4vw,22px);color:var(--soft);max-width:760px;margin:0 auto 26px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:18px;font-weight:700;text-decoration:none;font-size:18px;box-shadow:var(--shadow);border:0;cursor:pointer;font-family:inherit}
+.btn.main{background:var(--brand);color:#fff;box-shadow:0 4px 0 var(--brand-d)}
+.btn.alt{background:#fff;color:var(--ink)}
+.btn.coffee{background:var(--sun);color:#4A3200;box-shadow:0 4px 0 #D9A21F}
+.hero .shot{margin:40px auto 0;max-width:820px;border-radius:26px;overflow:hidden;box-shadow:0 18px 40px rgba(110,70,30,.18);border:6px solid #fff}
+.hero .shot img{display:block;width:100%;height:auto}
+section{padding:48px 0;scroll-margin-top:64px}
+h2{font-size:clamp(28px,4vw,38px);margin:0 0 8px;text-align:center}
+.sub{text-align:center;color:var(--soft);max-width:720px;margin:0 auto 30px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:stretch}
+@media (max-width:820px){.about{grid-template-columns:1fr}}
+.panel{background:var(--card);border-radius:26px;box-shadow:var(--shadow);padding:28px clamp(20px,4vw,36px)}
+.panel p{margin:0 0 12px}
+.panel h3{margin:0 0 6px;font-size:22px;color:var(--brand-d)}
+.mv{display:grid;gap:16px}
+.mv .panel{padding:22px 26px}
+.mv .panel p{margin:0;color:var(--soft);font-size:17px}
+.name{background:#FFF0C7;border-radius:18px;padding:12px 16px;font-size:16px;margin-top:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:s}
+.step{background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:22px;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;margin-bottom:10px}
+.step h3{margin:0 0 6px;font-size:21px}
+.step p{margin:0;color:var(--soft);font-size:16px}
+.letter{background:var(--card);border-radius:26px;box-shadow:var(--shadow);padding:30px clamp(20px,4vw,44px);max-width:860px;margin:0 auto}
+.letter p{margin:0 0 14px}
+.letter .sign{font-weight:700;color:var(--brand-d);margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:22px}
+.card .ic{font-size:40px;line-height:1;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;margin-bottom:10px}
+.card h3{margin:0 0 6px;font-size:22px}
+.card p{margin:0;color:var(--soft);font-size:16px}
+.apps{display:grid;gap:22px}
+.app{display:grid;grid-template-columns:1.1fr 1fr;background:var(--card);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}
+.app .pic{background:#F3EBDD;min-height:240px}
+.app .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.app .txt{padding:24px 26px}
+.app h3{margin:0 0 4px;font-size:26px}
+.tag{display:inline-block;font-size:14px;font-weight:700;border-radius:999px;padding:2px 12px;margin-bottom:8px}
+.tag.ready{background:#DDF3E5;color:#1E6B40}.tag.soon{background:#FFF0C7;color:#7A5600}
+.app ul{margin:8px 0 14px;padding-inline-start:20px;color:var(--soft);font-size:16px}
+@media (max-width:760px){.app{grid-template-columns:1fr}.app .pic{min-height:0;aspect-ratio:900/620}}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.gallery img{width:100%;border-radius:16px;box-shadow:var(--shadow);display:block}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}}
+.promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.promise div{background:#fff;border-radius:20px;padding:16px 18px;box-shadow:var(--shadow);font-weight:600}
+.promise .e{display:block;font-size:30px}
+.partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-bottom:22px}
+.support{background:linear-gradient(160deg,#DDF3E5,#FFF0C7);border-radius:30px;padding:40px clamp(20px,4vw,48px);text-align:center;box-shadow:var(--shadow)}
+.support h2{margin-bottom:10px}
+.support p{max-width:720px;margin:0 auto 14px}
+.uses{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 24px;padding:0;list-style:none}
+.uses li{background:rgba(255,255,255,.75);border-radius:999px;padding:6px 16px;font-weight:600;font-size:16px}
+.mail{display:inline-block;margin-top:14px;font-weight:700;direction:ltr;unicode-bidi:isolate}
+footer{padding:36px 0 50px;text-align:center;color:var(--soft);font-size:15px}
+footer a{font-weight:700}
+.copy{background:none;border:0;color:var(--brand-d);font:inherit;font-weight:700;cursor:pointer;text-decoration:underline}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#FFF0C7"/><circle cx="31" cy="9" r="4" fill="#FFC845"/><path d="M20 34V20" stroke="#2F9A5E" stroke-width="3" stroke-linecap="round"/><path d="M20 22c-8 0-11-5-11-11 7 0 11 4 11 11z" fill="#2F9A5E"/><path d="M20 19c0-6 4-10 11-10 0 6-4 10-11 10z" fill="#53B97E"/><path d="M10 34h20" stroke="#C8643B" stroke-width="3" stroke-linecap="round"/></svg>
+    <span>Nabta Kids<small>نبتة</small></span>
+  </a>
+  <nav class="links">
+    <a href="#about"><span lang-ar>من نحن</span><span lang-en>About us</span></a>
+    <a href="#learn"><span lang-ar>البرنامج</span><span lang-en>The program</span></a>
+    <a href="#apps"><span lang-ar>تطبيقاتنا</span><span lang-en>Our apps</span></a>
+    <a href="#partners"><span lang-ar>للمدارس والشركاء</span><span lang-en>Schools &amp; partners</span></a>
+    <a href="#contact"><span lang-ar>تواصل معنا</span><span lang-en>Contact</span></a>
+  </nav>
+  <button class="lang" id="lang" aria-label="Change language">English</button>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <span class="eyebrow"><span lang-ar>🌱 نبتة: برنامج تعليمي للأطفال من ٣ إلى ٧ سنوات</span><span lang-en>🌱 Nabta: a learning program for ages 3 to 7</span></span>
+  <h1><span lang-ar>نزرع في قلوب أطفالنا <b>حبَّ القرآن</b> والعربية والتفكير</span><span lang-en>Helping children grow a <b>love of the Quran</b>, Arabic and thinking</span></h1>
+  <p class="lead"><span lang-ar>نبتة شركة ناشئة تصمّم تطبيقات تعليمية ممتعة تعلّم الأطفال القرآن والتجويد واللغة العربية والتفكير الناقد والرياضيات، وتنمّي ذكاءهم، بلا إعلانات ولا مشتريات داخل التطبيق.</span><span lang-en>Nabta Kids is a young company that designs fun learning apps. They teach children the Quran, Tajweed, Arabic, critical thinking and math, and help their minds grow. There are no ads and no in-app purchases.</span></p>
+  <div class="btns">
+    <a class="btn main" href="#apps">📱 <span lang-ar>جرّب تطبيقاتنا</span><span lang-en>Try our apps</span></a>
+    <a class="btn alt" href="#contact">✉️ <span lang-ar>تواصل معنا</span><span lang-en>Get in touch</span></a>
+  </div>
+  <div class="shot"><img src="images/qw-home.jpg" alt="Quran Words app home screen" width="1350" height="930"></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <h2><span lang-ar>من نحن</span><span lang-en>About us</span></h2>
+  <p class="sub"><span lang-ar>شركة صغيرة بفكرة كبيرة: أن يكون وقت الشاشة وقتًا ينفع الطفل</span><span lang-en>A small company with a big idea: screen time that is good for children</span></p>
+  <div class="about">
+    <div class="panel">
+      <div lang-ar>
+        <p>بدأت نبتة من سؤال بسيط سأله والدان: لماذا لا نجد تطبيقًا لأطفالنا يعلّمهم دينهم ولغتهم، ويحترم أعمارهم، ولا يملأ الشاشة بالإعلانات؟</p>
+        <p>فقرّرنا أن نصنعه بأنفسنا. نجمع بين تصميم الألعاب التعليمية، وأساليب تعليم الطفولة المبكرة، ومراجعة المحتوى على يد متحدثين أصليين للعربية، لنقدّم برنامجًا متكاملًا ينمو مع الطفل.</p>
+        <p>كل تطبيق من تطبيقاتنا جزء من برنامج نبتة: سلسلة مترابطة تبدأ بكلمات القرآن، ثم التجويد، ثم القراءة العربية والرياضيات.</p>
+      </div>
+      <div lang-en>
+        <p>Nabta started with a simple question from two parents: why can't we find an app that teaches our children their faith and their language, suits their age, and doesn't fill the screen with ads?</p>
+        <p>So we decided to make it ourselves. We bring together educational game design, early-childhood teaching methods and content reviewed by native Arabic speakers, to build a complete program that grows with the child.</p>
+        <p>Each of our apps is part of the Nabta program, a connected series that starts with Quran words and moves on to Tajweed, Arabic reading and math.</p>
+      </div>
+      <p class="name"><span lang-ar>🌱 <b>لماذا «نبتة»؟</b> لأن الطفل بذرة، وكل كلمة يتعلّمها قطرة ماء تساعده على أن ينمو.</span><span lang-en>🌱 <b>Why "Nabta"?</b> Nabta means "sprout" in Arabic. A child is a seed, and every word they learn is a drop of water that helps them grow.</span></p>
+    </div>
+    <div class="mv">
+      <div class="panel"><h3>🎯 <span lang-ar>رسالتنا</span><span lang-en>Our mission</span></h3><p><span lang-ar>أن نقدّم للأطفال المسلمين تعليمًا ممتعًا وموثوقًا للقرآن والعربية والتفكير، يطمئنّ إليه الوالدان.</span><span lang-en>To give Muslim children fun, trustworthy learning in the Quran, Arabic and thinking skills that parents can rely on.</span></p></div>
+      <div class="panel"><h3>🔭 <span lang-ar>رؤيتنا</span><span lang-en>Our vision</span></h3><p><span lang-ar>أن يكون في كل بيت مسلم برنامج تعليمي آمن يحبّه الطفل ويكبر معه.</span><span lang-en>A safe learning program in every Muslim home, one that children love and grow up with.</span></p></div>
+      <div class="panel"><h3>💚 <span lang-ar>قيمنا</span><span lang-en>Our values</span></h3><p><span lang-ar>الأمانة في المحتوى، واحترام خصوصية الطفل، والجودة قبل السرعة.</span><span lang-en>Accurate content, respect for children's privacy, and quality before speed.</span></p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="learn"><div class="wrap">
+  <h2><span lang-ar>برنامج نبتة: ماذا يتعلّم طفلك؟</span><span lang-en>The Nabta program: what will your child learn?</span></h2>
+  <p class="sub"><span lang-ar>ستة مجالات نبني عليها كل تطبيق</span><span lang-en>Six areas that every app is built around</span></p>
+  <div class="grid">
+    <div class="card"><div class="ic" style="background:#FDE7DB">📖</div><h3><span lang-ar>القرآن الكريم</span><span lang-en>The Quran</span></h3><p><span lang-ar>كلمات قرآنية مع معانيها وصورها، وقصص قصيرة تربط الكلمة بعالم الطفل.</span><span lang-en>Quran words with their meanings and pictures, and short stories that link each word to the child's world.</span></p></div>
+    <div class="card"><div class="ic" style="background:#E3E4FA">🏮</div><h3><span lang-ar>التجويد</span><span lang-en>Tajweed</span></h3><p><span lang-ar>أحكام التجويد الأولى بالاستماع والتكرار، خطوة بخطوة.</span><span lang-en>First Tajweed rules through listening and repeating, one step at a time.</span></p></div>
+    <div class="card"><div class="ic" style="background:#DDF3E5">✍️</div><h3><span lang-ar>اللغة العربية</span><span lang-en>Arabic</span></h3><p><span lang-ar>أصوات الحروف وأشكالها، وكتابتها بالترتيب الصحيح، وكتابة اسم الطفل متصلًا.</span><span lang-en>Letter sounds and shapes, writing them in the right order, and writing the child's own name joined up.</span></p></div>
+    <div class="card"><div class="ic" style="background:#FFF0C7">🤔</div><h3><span lang-ar>التفكير الناقد</span><span lang-en>Critical thinking</span></h3><p><span lang-ar>أسئلة بعد كل قصة: لماذا؟ ماذا يحدث بعد؟ ما الشيء المختلف؟</span><span lang-en>Questions after every story: Why? What happens next? Which one is different?</span></p></div>
+    <div class="card"><div class="ic" style="background:#DCF1F2">🔢</div><h3><span lang-ar>الرياضيات</span><span lang-en>Math</span></h3><p><span lang-ar>العدّ والجمع والطرح والأنماط من خلال مغامرات ممتعة.</span><span lang-en>Counting, adding, taking away and patterns through fun adventures.</span></p></div>
+    <div class="card"><div class="ic" style="background:#F6E1EE">🧠</div><h3><span lang-ar>الذكاء</span><span lang-en>Growing minds</span></h3><p><span lang-ar>ألعاب ذاكرة وانتباه ورسم وتلوين تنمّي ذكاء الطفل وخياله.</span><span lang-en>Memory, attention, drawing and colouring games that grow the child's mind and imagination.</span></p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><span lang-ar>كيف نصنع تطبيقاتنا</span><span lang-en>How we make our apps</span></h2>
+  <p class="sub"><span lang-ar>أربع خطوات يمرّ بها كل تطبيق قبل أن يصل إلى طفلك</span><span lang-en>Four steps every app goes through before it reaches your child</span></p>
+  <div class="steps">
+    <div class="step"><h3><span lang-ar>نخطّط الدروس</span><span lang-en>We plan the lessons</span></h3><p><span lang-ar>نختار ما يناسب عمر الطفل، ونرتّبه من السهل إلى الأصعب.</span><span lang-en>We choose what suits the child's age and order it from easy to harder.</span></p></div>
+    <div class="step"><h3><span lang-ar>نصمّم اللعب</span><span lang-en>We design the play</span></h3><p><span lang-ar>شخصيات محبّبة وقصص وألعاب قصيرة تُبقي الطفل متحمّسًا.</span><span lang-en>Friendly characters, stories and short games that keep children excited.</span></p></div>
+    <div class="step"><h3><span lang-ar>نسجّل ونراجع</span><span lang-en>We record and review</span></h3><p><span lang-ar>تسجيلات بصوت متحدث أصلي، ومراجعة كاملة للمحتوى قبل النشر.</span><span lang-en>Recordings by a native speaker and a full content review before release.</span></p></div>
+    <div class="step"><h3><span lang-ar>نجرّب مع الأطفال</span><span lang-en>We test with children</span></h3><p><span lang-ar>نستمع إلى الأطفال والوالدين، ونحسّن التطبيق بناءً على آرائهم.</span><span lang-en>We listen to children and parents and improve the app based on what they tell us.</span></p></div>
+  </div>
+</div></section>
+
+<section id="apps"><div class="wrap">
+  <h2><span lang-ar>تطبيقاتنا</span><span lang-en>Our apps</span></h2>
+  <p class="sub"><span lang-ar>تطبيق جاهز للتجربة الآن، وتطبيقات أخرى نعمل على تطويرها</span><span lang-en>One app you can try now, and more that we are still building</span></p>
+  <div class="apps">
+    <article class="app">
+      <div class="pic"><img src="images/qw-meet.jpg" alt="Quran Words: meeting a word" loading="lazy"></div>
+      <div class="txt">
+        <span class="tag ready"><span lang-ar>جاهز للتجربة</span><span lang-en>Ready to try</span></span>
+        <h3><span lang-ar>كلماتي من القرآن</span><span lang-en>Quran Words</span></h3>
+        <p><span lang-ar>مع بسمة الجملة، يتعلّم الطفل ٢٤ كلمة من القرآن الكريم.</span><span lang-en>With Basma the camel, children learn 24 words from the Holy Quran.</span></p>
+        <ul>
+          <li><span lang-ar>يسمع الكلمة ومعناها، ثم يقولها ويسمع صوته</span><span lang-en>Hear each word and its meaning, then say it and hear their own voice</span></li>
+          <li><span lang-ar>٦ قصص مصوّرة مع أسئلة تفكير</span><span lang-en>6 picture stories with thinking questions</span></li>
+          <li><span lang-ar>كتابة الحروف العربية واسم الطفل، وتلوين وألعاب ذاكرة</span><span lang-en>Writing Arabic letters and the child's name, colouring and memory games</span></li>
+        </ul>
+        <a class="btn main" href="apps/nabta-quran-words.apk" download>⬇️ <span lang-ar>تحميل لأجهزة أندرويد</span><span lang-en>Download for Android</span></a>
+      </div>
+    </article>
+    <article class="app">
+      <div class="pic"><img src="images/tajweed.jpg" alt="Noor's Tajweed Lanterns" loading="lazy"></div>
+      <div class="txt">
+        <span class="tag soon"><span lang-ar>قيد التطوير</span><span lang-en>In development</span></span>
+        <h3><span lang-ar>فوانيس التجويد مع نور</span><span lang-en>Noor's Tajweed Lanterns</span></h3>
+        <p><span lang-ar>يتعرّف الطفل على أحكام التجويد الأولى بالاستماع والتكرار، ويضيء فانوسًا مع كل درس.</span><span lang-en>Children meet the first Tajweed rules by listening and repeating, and light a lantern with each lesson.</span></p>
+      </div>
+    </article>
+    <article class="app">
+      <div class="pic"><img src="images/arabic.jpg" alt="Huda's Letter Oasis" loading="lazy"></div>
+      <div class="txt">
+        <span class="tag soon"><span lang-ar>قيد التطوير</span><span lang-en>In development</span></span>
+        <h3><span lang-ar>واحة الحروف مع هدى</span><span lang-en>Huda's Letter Oasis</span></h3>
+        <p><span lang-ar>رحلة في القراءة العربية للصف الأول: الحروف والحركات والكلمات والجمل.</span><span lang-en>A Grade 1 Arabic reading journey through letters, vowel marks, words and sentences.</span></p>
+      </div>
+    </article>
+    <article class="app">
+      <div class="pic"><img src="images/math.jpg" alt="Pip's Number Island" loading="lazy"></div>
+      <div class="txt">
+        <span class="tag soon"><span lang-ar>قيد التطوير</span><span lang-en>In development</span></span>
+        <h3><span lang-ar>جزيرة الأرقام</span><span lang-en>Pip's Number Island</span></h3>
+        <p><span lang-ar>رياضيات الصف الأول في ٣٥ مستوى: العدّ والجمع والطرح والأشكال والأنماط.</span><span lang-en>Grade 1 math in 35 levels: counting, adding, taking away, shapes and patterns.</span></p>
+      </div>
+    </article>
+  </div>
+  <div class="gallery">
+    <img src="images/qw-home.jpg" alt="Quran Words home" loading="lazy">
+    <img src="images/qw-meet.jpg" alt="Quran Words garden path" loading="lazy">
+    <img src="images/qw-story.jpg" alt="Quran Words story" loading="lazy">
+  </div>
+</div></section>
+
+<section id="parents"><div class="wrap">
+  <h2><span lang-ar>رسالة إلى الوالدين</span><span lang-en>A letter to parents</span></h2>
+  <div class="letter">
+    <div lang-ar>
+      <p>عزيزي الأب، عزيزتي الأم، السلام عليكم ورحمة الله وبركاته.</p>
+      <p>أطفالنا يقضون وقتًا طويلًا أمام الشاشات، وكثير مما يرونه لا يشبه قيمنا ولا يبني عقولهم. لذلك أسّسنا نبتة: لنصمّم تطبيقات يحبّها الطفل، ويطمئنّ إليها الوالدان.</p>
+      <p>في تطبيقاتنا يتعرّف الطفل على كلمات من القرآن الكريم ومعانيها، ويتدرّب على أحكام التجويد بأسلوب لطيف، ويتعلّم كتابة الحروف العربية بالترتيب الصحيح، ويستمع إلى قصص قصيرة بصوت عربي فصيح، ثم يجيب عن أسئلة تحرّك تفكيره، ويلعب ألعاب ذاكرة وعدّ وأنماط تنمّي ذكاءه.</p>
+      <p>كل تسجيل صوتي عربي في تطبيقاتنا بصوت متحدث أصلي، وكل محتوى يراجعه متحدثون أصليون قبل النشر. ونحرص على ألّا نعرض إعلانات، وألّا نجمع بيانات أطفالكم، وأن تعمل التطبيقات دون إنترنت.</p>
+      <p class="sign">فريق نبتة</p>
+    </div>
+    <div lang-en>
+      <p>Dear parents, assalamu alaikum.</p>
+      <p>Our children spend a lot of time on screens, and much of what they see does not reflect our values or build their minds. That is why we founded Nabta Kids: to make apps that children love and that parents can trust.</p>
+      <p>In our apps, children meet words from the Holy Quran and learn what they mean. They practise Tajweed in a gentle way, learn to write Arabic letters in the right stroke order, and listen to short stories read in clear Arabic. Then they answer questions that make them think, and play memory, counting and pattern games that help them grow.</p>
+      <p>Every Arabic recording in our apps is in a native speaker's voice, and native speakers review the content before it is released. We do not show ads, we do not collect your child's data, and the apps work offline.</p>
+      <p class="sign">The Nabta Kids team</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2><span lang-ar>وعدنا لكم</span><span lang-en>Our promise to you</span></h2>
+  <p class="sub"><span lang-ar>ما نلتزم به في كل تطبيق</span><span lang-en>What every app will always do</span></p>
+  <div class="promise">
+    <div><span class="e">🚫</span><span lang-ar>بلا إعلانات</span><span lang-en>No ads</span></div>
+    <div><span class="e">🔒</span><span lang-ar>لا نجمع بيانات طفلك</span><span lang-en>We don't collect your child's data</span></div>
+    <div><span class="e">✈️</span><span lang-ar>تعمل دون إنترنت</span><span lang-en>Works offline</span></div>
+    <div><span class="e">🎙️</span><span lang-ar>أصوات عربية بصوت متحدث أصلي</span><span lang-en>Arabic voices recorded by a native speaker</span></div>
+    <div><span class="e">👨‍👩‍👧</span><span lang-ar>إعدادات خاصة بالكبار</span><span lang-en>A settings area just for grown-ups</span></div>
+  </div>
+</div></section>
+
+<section id="partners"><div class="wrap">
+  <h2><span lang-ar>للمدارس والمراكز والشركاء</span><span lang-en>For schools, centres and partners</span></h2>
+  <p class="sub"><span lang-ar>نرحّب بالتعاون مع من يشاركنا الهدف نفسه</span><span lang-en>We welcome anyone who shares our goal</span></p>
+  <div class="partners">
+    <div class="card"><div class="ic" style="background:#DDF3E5">🏫</div><h3><span lang-ar>المدارس والروضات</span><span lang-en>Schools and kindergartens</span></h3><p><span lang-ar>استخدموا تطبيقاتنا في الصف، وأخبرونا بما يحتاجه طلابكم.</span><span lang-en>Use our apps in class and tell us what your students need.</span></p></div>
+    <div class="card"><div class="ic" style="background:#E3E4FA">🕌</div><h3><span lang-ar>مراكز تحفيظ القرآن</span><span lang-en>Quran centres</span></h3><p><span lang-ar>أداة مساندة ممتعة للأطفال الصغار بين الحلقات.</span><span lang-en>A fun extra tool for young children between lessons.</span></p></div>
+    <div class="card"><div class="ic" style="background:#FFF0C7">🤝</div><h3><span lang-ar>الداعمون والمستثمرون</span><span lang-en>Supporters and investors</span></h3><p><span lang-ar>ساعدونا على نشر التطبيقات وبناء المزيد من برنامج نبتة.</span><span lang-en>Help us publish the apps and build more of the Nabta program.</span></p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="support">
+    <h2>✉️ <span lang-ar>تواصل معنا وادعم الفكرة</span><span lang-en>Contact us and support the idea</span></h2>
+    <p><span lang-ar>نحن فريق صغير يعمل على هذه التطبيقات بحبّ. دعمكم يساعدنا على الاستمرار في التطوير، وعلى نشر التطبيقات في المتاجر بلا إعلانات.</span><span lang-en>We are a small team who build these apps with love. Your support helps us keep developing them and publish them in the app stores without ads.</span></p>
+    <ul class="uses">
+      <li>📱 <span lang-ar>رسوم النشر في المتاجر</span><span lang-en>App store fees</span></li>
+      <li>🛠️ <span lang-ar>تطوير تطبيقات جديدة</span><span lang-en>Building new apps</span></li>
+      <li>🎙️ <span lang-ar>التسجيل الصوتي والمراجعة</span><span lang-en>Voice recording and review</span></li>
+      <li>🚫 <span lang-ar>إبقاء التطبيقات بلا إعلانات</span><span lang-en>Keeping the apps ad-free</span></li>
+    </ul>
+    <div class="btns">
+      <a class="btn coffee" id="coffee" href="mailto:nabtakidspro@gmail.com?subject=%E2%98%95%20Support%20Nabta%20Kids">☕ <span lang-ar>أريد أن أدعمكم</span><span lang-en>I'd like to support you</span></a>
+      <a class="btn main" href="mailto:nabtakidspro@gmail.com?subject=Nabta%20Kids%20partnership">🤝 <span lang-ar>شراكة أو تعاون</span><span lang-en>Partner with us</span></a>
+      <a class="btn alt" href="mailto:nabtakidspro@gmail.com?subject=Nabta%20Kids%20feedback">💬 <span lang-ar>أرسل لنا رأيك</span><span lang-en>Send us feedback</span></a>
+    </div>
+    <p style="margin-top:16px"><span lang-ar>البريد الإلكتروني:</span><span lang-en>Email:</span><br><a class="mail" href="mailto:nabtakidspro@gmail.com">nabtakidspro@gmail.com</a> <button class="copy" id="copy"><span lang-ar>نسخ</span><span lang-en>Copy</span></button></p>
+    <p style="font-size:15px;margin-bottom:0"><span lang-ar>وإن لم تستطع الدعم الآن، فشارك الصفحة مع غيرك من الآباء والأمهات، وادعُ لنا بالتوفيق. 🤲</span><span lang-en>If you can't support us right now, please share this page with other parents, and keep us in your prayers. 🤲</span></p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span lang-ar>© ٢٠٢٦ نبتة Nabta Kids. تطبيقات تعليمية للأطفال المسلمين.</span><span lang-en>© 2026 Nabta Kids. Learning apps for Muslim children.</span>
+  <br><a href="mailto:nabtakidspro@gmail.com">nabtakidspro@gmail.com</a>
+</div></footer>
+
+<script>
+// Put your Buy Me a Coffee, Ko-fi or PayPal link here when you have one; until then the coffee button opens an email.
+const COFFEE_LINK = '';
+const EMAIL = 'nabtakidspro@gmail.com';
+if (COFFEE_LINK) { const c = document.getElementById('coffee'); c.href = COFFEE_LINK; c.target = '_blank'; c.rel = 'noopener'; }
+const html = document.documentElement, btn = document.getElementById('lang');
+const setLang = l => {
+  html.lang = l; html.dir = l === 'ar' ? 'rtl' : 'ltr'; btn.textContent = l === 'ar' ? 'English' : 'العربية';
+  document.title = l === 'ar' ? 'نبتة Nabta Kids · تطبيقات تعليمية للأطفال' : 'Nabta Kids · Learning apps for children';
+  try { localStorage.setItem('nabta-lang', l); } catch (e) { }
+};
+let start = new URLSearchParams(location.search).get('lang');
+if (!start) { try { start = localStorage.getItem('nabta-lang'); } catch (e) { } }
+setLang(start === 'en' ? 'en' : 'ar');
+btn.onclick = () => setLang(html.lang === 'ar' ? 'en' : 'ar');
+document.getElementById('copy').onclick = async e => {
+  const b = e.currentTarget;
+  try { await navigator.clipboard.writeText(EMAIL); b.textContent = html.lang === 'ar' ? 'تم النسخ ✓' : 'Copied ✓'; } catch (x) { }
+};
+</script>
+</body>
+</html>
