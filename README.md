@@ -17,8 +17,8 @@ The website is `index.html`. It is in Arabic and English, and the button at the 
 2. Go to **Settings → Pages**. Under **Source**, choose **Deploy from a branch**, select `main` and `/ (root)`, and press **Save**.
 3. After a minute the site is live at `https://<your-username>.github.io/<repo-name>/`.
 
-## Add a "Buy me a coffee" link
-Once you have a Buy Me a Coffee, Ko-fi or PayPal.me page, open `index.html`, find `const COFFEE_LINK = '';` near the end, and put your link between the quotes. Until then, the coffee button opens an email.
+## Donations
+The "Support us with $10" button opens a PayPal donation of $10 (USD) to nabtakidspro@gmail.com. To change the amount or the link, open `index.html` and edit `const COFFEE_LINK` near the end. If it is set to `''`, the button opens an email instead.
 
 ## Contact
 nabtakidspro@gmail.com
